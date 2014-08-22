@@ -3,7 +3,7 @@ class ModuleLijst{
     public function createModule($naam,$prijs){
         $dbh = new PDO("mysql:host=localhost;dbname=cursusphp","cursusgebruiker","cursuspwd");
         
-        $sql = "insert into modules(naam,prijs) values(".$naam.",".$prijs.")";
+        $sql = "insert into modules (naam,prijs) values('".$naam."',".$prijs.")";//om een string in de database toe te voegen moet je '".$."'
         
         $dbh->exec($sql);
         
