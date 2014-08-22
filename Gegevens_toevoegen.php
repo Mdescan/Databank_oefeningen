@@ -3,7 +3,7 @@ class ModuleLijst{
     public function createModule($naam,$prijs){
         $dbh = new PDO("mysql:host=localhost;dbname=cursusphp","cursusgebruiker","cursuspwd");
         
-        $sql = "insirt into modules(naam,prijs) values('".$naam."',".$prijs.")";
+        $sql = "insert into modules(naam,prijs) values(".$naam.",".$prijs.")";
         
         $dbh->exec($sql);
         
@@ -21,7 +21,7 @@ class ModuleLijst{
         <h1>Module toevoegen</h1>
         <?php
            $mLijst = new ModuleLijst();
-           $mLijst->createModule(Access, 85.0);
+           $mLijst->createModule("Access", 85.0);
            echo "Derde deeltje gegevens toevoegen";
         ?>
     </body>
