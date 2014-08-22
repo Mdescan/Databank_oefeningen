@@ -1,7 +1,7 @@
 <?php
 require_once ("module.class.php");
 
-class ModuleLijst{
+class ModuleLijst2{
     
     private $dbConn;
     private $dbUsername;
@@ -19,8 +19,8 @@ class ModuleLijst{
         $dbh= new PDO($this->dbConn,  $this->dbUsername, $this->dbPassword);
         $resultSet = $dbh->query($sql);
         foreach($resultSet as $rij){
-            $module = new Module($rij["id"],$rij["naam"],$rij["prijs"]);
-            array_push($resultSet, $module);
+            $module = new Module2($rij["id"],$rij["naam"],$rij["prijs"]);
+            array_push($Lijst, $module);
         }
         $dbh = null;
         return $Lijst;
@@ -33,11 +33,15 @@ class ModuleLijst{
         if ($resultSet){
             $rij = $resultSet->fetch();
             if($rij){
-                $module = new Module($id,$rij["naam"],$rij["prijs"]);
+                $module = new Module2($id,$rij["naam"],$rij["prijs"]);
                 $dbh = null;
                 return $module;
-            }else return FALSE;
-        }else return FALSE;
+            }else{
+                return FALSE;
+            }
+        }else{
+            return FALSE;
+        }
     }
     
     public function updateModule($module){
