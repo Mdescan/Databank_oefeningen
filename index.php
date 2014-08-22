@@ -28,7 +28,7 @@ and open the template in the editor.
                             <a href="http://localhost/Databank_oefeningen/Gegevens_ophalen.php">Gegevens ophalen</a>
                         </li>
                         <li>
-                            <a href="http://localhost/Databank_oefeningen/Gegevens_ophalen.php">Gegevens ophalen</a>
+                            <a href="http://localhost/Databank_oefeningen/Gegevens_ophalen.php">Gegevens toevoegen</a>
                         </li>
                     </ul>
                     <?php
