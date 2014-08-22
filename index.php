@@ -33,6 +33,9 @@ and open the template in the editor.
                         <li>
                             <a href="http://localhost/Databank_oefeningen/Gegevens_verwijderen.php">Gegevens verwijderen</a>
                         </li>
+                        <li>
+                            <a href="http://localhost/Databank_oefeningen/Gegevens_wijzigen.php">Gegevens wijzigen</a>
+                        </li>
                     </ul>
                     <?php
                     // put your code here
