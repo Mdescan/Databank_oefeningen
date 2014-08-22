@@ -22,6 +22,7 @@ class ModuleLijst{
         <?php
             $mLijst = new ModuleLijst();
             $mLijst->deleteModule(12);
+            echo "Het vierde deeltje laat ons de gegevens die we toevoegden nu maar weer verwijderen";
         ?>
     </body>
 </html>
